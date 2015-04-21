@@ -28,5 +28,17 @@ trait CreateCommand
 
 		$this->pusher->trigger( $this->channel, "command".$this->suffix, $data );
 	}
+
+	public function Updated($f3)
+	{
+		$this->initializePusher();
+
+
+		$data = array(
+				"id" => $f3->get("PARAMS.id"),
+				"command" => $f3->get("PARAMS.code", 0),
+			);
+
+		$this->pusher->trigger( $this->channel, "updated".$this->suffix, $data );
+	}
 }
-?>

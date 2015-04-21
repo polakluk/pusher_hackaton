@@ -1,5 +1,4 @@
 <?php
-
 namespace Api;
 
 
@@ -23,7 +22,7 @@ class Rest{
 	public function InitializeParts()
 	{
 		$this->initializePusher();
-		$boardMainRoutes = new \Api\BoardMain\Routes( $this->app );
+		$boardMainRoutes = new \Api\Board\Routes( $this->app );
 		$boardMainRoutes->RegisterRoutes();
 
 		$boardItemRoutes = new \Api\BoardItem\Routes( $this->app );

@@ -1,6 +1,6 @@
 <?php
 
-namespace Api\BoardMain;
+namespace Api\Board;
 
 class Routes
 {
@@ -16,7 +16,5 @@ class Routes
 	public function RegisterRoutes()
 	{
 		$this->RegisterRoutesCommon();
-		$this->app->route('GET /board/create/@id', "\\Api\\BoardMain\\BoardMain->Create");
-		$this->app->route('GET /board/@id/command/@code', "\\Api\\BoardMain\\BoardMain->Command");
 	}
 }
