@@ -33,10 +33,32 @@ trait CommonCommand
 	{
 		$this->initializePusher();
 
+		$command = empty($f3->get("PARAMS.code"))
+					? 1
+					: $f3->get("PARAMS.code" );
 
 		$data = array(
 				"id" => $f3->get("PARAMS.id"),
-				"command" => $f3->get("PARAMS.code", 0),
+				"command" => $command,
+				"data" => $f3->get("POST.data")
+			);
+
+		$this->pusher->trigger( $this->channel, "updated".$this->suffix, $data );
+	}
+
+
+	public function UpdatedPost($f3)
+	{
+		$this->initializePusher();
+
+		$command = empty($f3->get("PARAMS.code"))
+					? 1
+					: $f3->get("PARAMS.code" );
+
+		$data = array(
+				"id" => $f3->get("PARAMS.id"),
+				"command" => $command,
+				"data" => $f3->get("POST.data")
 			);
 
 		$this->pusher->trigger( $this->channel, "updated".$this->suffix, $data );

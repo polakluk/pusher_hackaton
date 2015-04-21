@@ -27,5 +27,9 @@ class Rest{
 
 		$boardItemRoutes = new \Api\BoardItem\Routes( $this->app );
 		$boardItemRoutes->RegisterRoutes();
+
+
+		$boardMemberRoutes = new \Api\BoardMember\Routes( $this->app );
+		$boardMemberRoutes->RegisterRoutes();
 	}
 }
