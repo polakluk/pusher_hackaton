@@ -1,0 +1,7 @@
+{
+    "require": {
+    	"bcosca/fatfree": "dev-master",
+    	
+        "pusher/pusher-php-server": "dev-master"
+    }
+}
