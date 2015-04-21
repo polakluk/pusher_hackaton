@@ -15,6 +15,7 @@ class Routes
 
 	public function RegisterRoutes()
 	{
-		$this->app->route('GET /Board', "\\Api\\BoardMain\\BoardMain->CreateBoard");
+		$this->app->route('GET /board/create/@id', "\\Api\\BoardMain\\BoardMain->Create");
+		$this->app->route('GET /board/@id/command/@code', "\\Api\\BoardMain\\BoardMain->Command");
 	}
 }
