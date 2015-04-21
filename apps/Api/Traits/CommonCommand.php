@@ -2,7 +2,7 @@
 
 namespace Api\Traits;
 
-trait CreateCommand
+trait CommonCommand
 {
 	public function Create($f3)
 	{
