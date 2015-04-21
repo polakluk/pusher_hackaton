@@ -23,7 +23,10 @@ class Rest{
 	public function InitializeParts()
 	{
 		$this->initializePusher();
-		$boardMainRoutes = new \Api\BoardMain\Routes( $this->app, $this->pusher );
+		$boardMainRoutes = new \Api\BoardMain\Routes( $this->app );
 		$boardMainRoutes->RegisterRoutes();
+
+		$boardItemRoutes = new \Api\BoardItem\Routes( $this->app );
+		$boardItemRoutes->RegisterRoutes();
 	}
 }
