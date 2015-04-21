@@ -4,7 +4,7 @@ namespace Api\BoardItem;
 
 class BoardItem extends \Api\Pushable
 {
-	protected $channel = "boardItems";
+	protected $channel = "BoardItems";
 	protected $suffix = "BoardItem";
 
 	use \Api\Traits\CreateCommand;
